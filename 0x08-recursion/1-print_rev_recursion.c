@@ -1,65 +1,14 @@
 #include "main.h"
-
-#include <stdio.h>
-
-
 /**
- *
- *  * main - check the code
- *
- *   *
- *
- *    * Return: Always 0.
- *
- *     */
+ * _print_rev_recursion - Prints a string in reverse.
+ * @s: The string to be printed.
+ */
 
-int main(void)
-
+void _print_rev_recursion(char *s)
 {
-
-	    char c;
-
-
-	        c = '0';
-
-		    printf("%c: %d\n", c, _isdigit(c));
-
-		        c = 'a';
-
-			    printf("%c: %d\n", c, _isdigit(c));
-
-			        return (0);
-
-}#include "main.h"
-
-#include <stdio.h>
-
-
-/**
- *
- *  * main - check the code
- *
- *   *
- *
- *    * Return: Always 0.
- *
- *     */
-
-int main(void)
-
-{
-
-	    char c;
-
-
-	        c = '0';
-
-		    printf("%c: %d\n", c, _isdigit(c));
-
-		        c = 'a';
-
-			    printf("%c: %d\n", c, _isdigit(c));
-
-			        return (0);
-
+	if (*s)
+	{
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
+	}
 }
